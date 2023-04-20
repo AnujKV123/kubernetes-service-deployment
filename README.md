@@ -1,5 +1,5 @@
 # Kubernetes Service & Deployment
-in this repo we learn about how to create kubernetes service and deployment with ingress controller for django app.
+in this repo we learn about how to create kubernetes service and deployment with nginx ingress controller for django app.
 #### 1. install kubectl
 #### 2. run command : kubectl apply -f https://raw.githubusercontent.com/kubernetes/ingress-nginx/controller-v1.0.0/deploy/static/provider/cloud/deploy.yaml
 #### 3. run command : kubectl apply -f deployment.yaml
