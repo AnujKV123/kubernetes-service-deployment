@@ -1,0 +1,23 @@
+
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-anuj-django-app
+  annotations:
+    nginx.ingress.kubernetes.io/rewrite-target: /$1
+  namespace: ingress-nginx
+ 
+
+spec:
+  ingressClassName: nginx
+  rules:
+  - host: anuj-django-app1.com
+    http: 
+      paths:
+        - path: /
+          pathType: Prefix
+          backend:
+            service:
+              name: anuj-django-app-service
+              port:
+                number: 80

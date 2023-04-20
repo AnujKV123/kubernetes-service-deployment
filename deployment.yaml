@@ -2,8 +2,9 @@ apiVersion: apps/v1
 kind: Deployment
 metadata:
   name: anuj-django-app-deployment
+  namespace: ingress-nginx
 spec:
-  replicas: 4
+  replicas: 2
   selector:
     matchLabels:
       app: django-app
